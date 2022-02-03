@@ -1,5 +1,5 @@
 #include "$CurrentDir:/dayz-scripts/src/spawnLoot.c"
-#include "$CurrentDir:/dayz-scripts/src/customM4A1.c"
+#include "$CurrentDir:/dayz-scripts/src/customWeapons.c"
 
 void addSpawnLoot(GameInventory inventory)
 {
