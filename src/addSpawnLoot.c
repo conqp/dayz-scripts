@@ -43,7 +43,7 @@ void addSpawnLoot(GameInventory inventory)
                 }
         );
         addAttachments(
-                inventory.CreateInInventory("M4A1"),
+                inventory.CreateInInventory("Glock19"),
                 {
                         "PistolSuppressor",
                         "Mag_Glock_15Rnd"
