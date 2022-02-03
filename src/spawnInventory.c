@@ -34,11 +34,11 @@ const autoptr array<string> M4A1_ATTACHMENTS = {
         "Battery9V",
         "M4_Suppressor",
         "Mag_STANAGCoupled_30Rnd"
-}
+};
 const autoptr array<string> GLOCK19_ATTACHMENTS = {
         "PistolSuppressor",
         "Mag_Glock_15Rnd"
-}
+};
 
 void addSpawnInventory(GameInventory inventory)
 {
