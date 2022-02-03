@@ -29,10 +29,8 @@ const autoptr array<string> SPAWN_LOOT = {
 void addSpawnLoot(GameInventory inventory)
 {
         addLoot(SPAWN_LOOT);
-
-        m4a1 = inventory.CreateInInventory("M4A1");
         addAttachments(
-                m4a1,
+                inventory.CreateInInventory("M4A1"),
                 {
                         "M4_OEBttstck",
                         "M4_RISHndgrd",
@@ -44,10 +42,8 @@ void addSpawnLoot(GameInventory inventory)
                         "Mag_STANAGCoupled_30Rnd"
                 }
         );
-
-        glock19 = inventory.CreateInInventory("M4A1");
         addAttachments(
-                glock19,
+                inventory.CreateInInventory("M4A1"),
                 {
                         "PistolSuppressor",
                         "Mag_Glock_15Rnd"
