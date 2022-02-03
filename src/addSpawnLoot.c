@@ -28,7 +28,7 @@ const autoptr array<string> SPAWN_LOOT = {
 
 void addSpawnLoot(GameInventory inventory)
 {
-        addLoot(SPAWN_LOOT);
+        addLoot(inventory, SPAWN_LOOT);
         addAttachments(
                 inventory.CreateInInventory("M4A1"),
                 {
