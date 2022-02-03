@@ -1,8 +1,10 @@
-void addCustomM4A1 (GameInventory inventory, array<string> attachments)
+EntityAI addCustomWeapon(GameInventory inventory, string weapon, array<string> attachments)
 {
-        M4A1_Base m4 = inventory.CreateInInventory("M4A1");
-        GameInventory m4inventory = m4.GetInventory();
+        auto weapon = inventory.CreateInInventory(weapon);
+        auto weaponInventory = weapon.GetInventory();
 
         foreach (auto attachment: attachments)
-                m4inventory.CreateInInventory(attachment);
+                weaponInventory.CreateInInventory(attachment);
+
+        return weapon;
 };
