@@ -40,7 +40,7 @@ const autoptr array<string> GLOCK19_ATTACHMENTS = {
         "Mag_Glock_15Rnd"
 }
 
-void addSpawnLoot(GameInventory inventory)
+void addSpawnInventory(GameInventory inventory)
 {
         addInventoryItems(inventory, SPAWN_LOOT);
         addAttachments(inventory.CreateInInventory("M4A1"), M4A1_ATTACHMENTS);
