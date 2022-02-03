@@ -1,8 +1,9 @@
 /*
  * Miscellaneous functions.
  */
- #ifndef RNE_FUNCTIONS
- #define RNE_FUNCTIONS
+#ifndef RNE_FUNCTIONS
+#define RNE_FUNCTIONS
+
 void addInventoryItems(GameInventory inventory, array<string> items) {
         foreach (auto item: items)
                 inventory.CreateInInventory(item);
