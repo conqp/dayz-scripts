@@ -1,6 +1,6 @@
 #include "$CurrentDir:/dayz-scripts/src/functions.c"
 
-const autoptr array<string> SPAWN_LOOT = {
+const autoptr array<string> SPAWN_ITEMS = {
         "AliceBag_Black",
         "Compass",
         "Canteen",
@@ -43,11 +43,7 @@ const autoptr array<string> GLOCK19_ATTACHMENTS = {
 
 void addSpawnInventory(GameInventory inventory)
 {
-        addInventoryItems(inventory, SPAWN_LOOT);
-        auto m4a1 = M4A1_Base.CreateWeaponWithAmmo("M4A1", "Mag_STANAGCoupled_30Rnd");
-        addAttachments(m4a1, M4A1_ATTACHMENTS);
-        inventory.AddEntityToInventory(m4a1);
-        auto glock19 = Glock19_Base.CreateWeaponWithAmmo("Glock19", "Mag_Glock_15Rnd");
-        addAttachments(glock19, GLOCK19_ATTACHMENTS);
-        inventory.AddEntityToInventory(glock19);
+        addInventoryItems(inventory, SPAWN_ITEMS);
+        addWeapon(inventory, "M4A1", M4A1_ATTACHMENTS, "Mag_STANAGCoupled_30Rnd");
+        addWeapon(inventory, "Glock19", GLOCK19_ATTACHMENTS, "Mag_Glock_15Rnd");
 }

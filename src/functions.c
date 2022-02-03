@@ -6,7 +6,21 @@ void addInventoryItems(GameInventory inventory, array<string> items) {
                 inventory.CreateInInventory(item);
 }
 
-void addAttachments(EntityAI weapon, array<string> attachments)
+EntityAI addWeapon(
+        GameInventory inventory,
+        string weaponType,
+        array<string> attachments,
+        string magazineType = "",
+        int flags = WeaponWithAmmoFlags.CHAMBER
+)
 {
-        addInventoryItems(weapon.GetInventory(), attachments);
-};
+        auto weapon = inventory.CreateInInventory(weaponType);
+
+        if (attachments)
+                addInventoryItems(weapon.GetInventory(), attachments);
+
+        if (magazineType)
+                weapon.SpawnAmmo(magazineType, flags);
+
+        return weapon;
+}
