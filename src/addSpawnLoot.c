@@ -30,9 +30,9 @@ void addSpawnLoot(GameInventory inventory)
 {
         addLoot(SPAWN_LOOT);
 
-        addCustomWeapon(
-                inventory,
-                "M4A1",
+        m4a1 = inventory.CreateInInventory("M4A1");
+        addAttachments(
+                m4a1,
                 {
                         "M4_OEBttstck",
                         "M4_RISHndgrd",
@@ -45,9 +45,9 @@ void addSpawnLoot(GameInventory inventory)
                 }
         );
 
-        addCustomWeapon(
-                inventory,
-                "Glock19",
+        glock19 = inventory.CreateInInventory("M4A1");
+        addAttachments(
+                glock19,
                 {
                         "PistolSuppressor",
                         "Mag_Glock_15Rnd"

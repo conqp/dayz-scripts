@@ -1,10 +1,10 @@
-EntityAI addCustomWeapon(GameInventory inventory, string weapon, array<string> attachments)
+void addAttachments(GameInventory inventory, array<string> attachments)
 {
-        auto weapon = inventory.CreateInInventory(weapon);
-        auto weaponInventory = weapon.GetInventory();
-
         foreach (auto attachment: attachments)
-                weaponInventory.CreateInInventory(attachment);
+                inventory.CreateInInventory(attachment);
+};
 
-        return weapon;
+void addAttachments(EntityAI weapon, array<string> attachments)
+{
+        addAttachments(weapon.GetInventory(), attachments);
 };
