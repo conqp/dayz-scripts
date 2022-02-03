@@ -8,7 +8,7 @@ void addInventoryItems(GameInventory inventory, array<string> items) {
                 inventory.CreateInInventory(item);
 }
 
-EntityAI addWeapon(
+Weapon_Base addWeapon(
         GameInventory inventory,
         string weaponType,
         array<string> attachments,
@@ -16,7 +16,8 @@ EntityAI addWeapon(
         int flags
 )
 {
-        auto weapon = inventory.CreateInInventory(weaponType);
+        auto entity = inventory.CreateInInventory(weaponType);
+        auto weapon = Weapon_Base.Cast(entity);
 
         if (attachments)
                 addInventoryItems(weapon.GetInventory(), attachments);
