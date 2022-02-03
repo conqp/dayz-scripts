@@ -39,14 +39,14 @@ void addSpawnLoot(GameInventory inventory)
                         "Battery9V",
                         "Battery9V",
                         "M4_Suppressor",
-                        "Mag_STANAGCoupled_30Rnd"
+                        "Mag_STANAGCoupled_30Rnd",
                 }
         );
         addAttachments(
                 inventory.CreateInInventory("Glock19"),
                 {
                         "PistolSuppressor",
-                        "Mag_Glock_15Rnd"
+                        "Mag_Glock_15Rnd",
                 }
         );
 }
