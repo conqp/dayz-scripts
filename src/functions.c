@@ -28,7 +28,7 @@ Weapon_Base addWeapon(
         return weapon;
 }
 
-EntityAI addWeapon(
+Weapon_Base addWeapon(
         GameInventory inventory,
         string weaponType,
         array<string> attachments,
