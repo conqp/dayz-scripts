@@ -16,8 +16,7 @@ Weapon_Base addWeapon(
         int flags
 )
 {
-        auto entity = inventory.CreateInInventory(weaponType);
-        auto weapon = Weapon_Base.Cast(entity);
+        auto weapon = Weapon_Base.Cast(inventory.CreateInInventory(weaponType));
 
         if (attachments)
                 addInventoryItems(weapon.GetInventory(), attachments);
