@@ -1,5 +1,4 @@
-#include "$CurrentDir:/dayz-scripts/src/inventory.c"
-#include "$CurrentDir:/dayz-scripts/src/weapons.c"
+#include "$CurrentDir:/dayz-scripts/src/functions.c"
 
 const autoptr array<string> SPAWN_LOOT = {
         "AliceBag_Black",
