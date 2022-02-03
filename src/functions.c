@@ -1,6 +1,8 @@
 /*
  * Miscellaneous functions.
  */
+ #ifndef RNE_FUNCTIONS
+ #define RNE_FUNCTIONS
 void addInventoryItems(GameInventory inventory, array<string> items) {
         foreach (auto item: items)
                 inventory.CreateInInventory(item);
@@ -10,8 +12,8 @@ EntityAI addWeapon(
         GameInventory inventory,
         string weaponType,
         array<string> attachments,
-        string magazineType = "",
-        int flags = WeaponWithAmmoFlags.CHAMBER
+        string magazineType,
+        int flags
 )
 {
         auto weapon = inventory.CreateInInventory(weaponType);
@@ -24,3 +26,15 @@ EntityAI addWeapon(
 
         return weapon;
 }
+
+EntityAI addWeapon(
+        GameInventory inventory,
+        string weaponType,
+        array<string> attachments,
+        string magazineType
+)
+{
+        return addWeapon(inventory, weaponType, attachments, magazineType, WeaponWithAmmoFlags.CHAMBER);
+}
+
+#endif
